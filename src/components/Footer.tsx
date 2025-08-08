@@ -113,8 +113,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/cancelation-policy" onClick={handleFooterLinkClick} className="text-gray-300 hover:text-qb-green transition-colors">
-                  Cancellations
+                <Link to="/refund-policy" onClick={handleFooterLinkClick} className="text-gray-300 hover:text-qb-green transition-colors">
+                  Refund Policy
                 </Link>
               </li>
               <li>

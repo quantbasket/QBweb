@@ -19,7 +19,7 @@ import DashboardWaiting from "./pages/DashboardWaiting";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
-import CancellationPolicy from "./pages/CancellationPolicy";
+import RefundPolicy from "./pages/RefundPolicy";
 import ComingSoon from "./pages/ComingSoon";
 import AppComingSoon from "./pages/AppComingSoon";
 import { useEffect } from "react";
@@ -98,7 +98,7 @@ const AppContent = () => {
         <Route path="/support" element={<Support />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
-        <Route path="/cancelation-policy" element={<CancellationPolicy />} />
+        <Route path="/refund-policy" element={<RefundPolicy />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         
