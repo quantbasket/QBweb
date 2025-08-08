@@ -19,6 +19,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Compliance Disclaimer */}
+      <div className="w-full bg-yellow-100 border-b border-yellow-300 text-yellow-900 text-center py-2 px-4 text-xs sm:text-sm">
+        <strong>Disclaimer:</strong> In compliance with Indian law, this payment is for platform services only, not for the purchase of any tradable Virtual Digital Asset. All tokens are non-monetary rewards for community use only.
+
+      </div>
       <Navigation />
       
       {/* Hero Section */}
@@ -33,7 +38,7 @@ const Index = () => {
               </h1>
               <p className="text-lg sm:text-xl mb-6 lg:mb-8 text-gray-200 px-2 sm:px-0">
                 Launch your community token today! Create community-driven tokens that reward impactful actions.
-                <span className="block text-base sm:text-lg text-qb-green mt-2">Additional features like ETFs and quant strategies coming soon.</span>
+                <span className="block text-base sm:text-lg text-qb-green mt-2">Additional features like quant strategies coming soon.</span>
               </p>
               
               {/* Mobile App Download Buttons */}
@@ -159,7 +164,7 @@ const Index = () => {
             <div className={`text-center lg:text-left ${isMobile ? 'order-last' : ''}`}>
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mb-4">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-qb-navy text-center lg:text-left">
-                  Tokenized ETFs & Quant Strategies
+                  Tokenized Quant Strategies
                 </h2>
                 <span className="bg-qb-blue/20 text-qb-blue px-3 py-1 rounded-full text-sm font-medium">Planned</span>
               </div>
@@ -178,8 +183,8 @@ const Index = () => {
                 <div className="flex items-start space-x-3 text-center sm:text-left">
                   <TrendingUp className="w-6 h-6 text-qb-blue mt-1 mx-auto sm:mx-0 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-qb-navy">Algorithmic Trading</h3>
-                    <p className="text-qb-dark-gray">Automated execution of complex trading strategies</p>
+                    <h3 className="font-semibold text-qb-navy">Algorithmic Strategies</h3>
+                    <p className="text-qb-dark-gray">Automated execution of complex strategies</p>
                   </div>
                 </div>
               </div>
@@ -314,7 +319,7 @@ const Index = () => {
       <section className="hero-gradient py-12 sm:py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 lg:mb-6">
-            Ready to Revolutionize Your Portfolio?
+            Ready to Revolutionize Your Community?
           </h2>
           <p className="text-lg sm:text-xl text-gray-200 mb-6 lg:mb-8 px-2 sm:px-0">
             {isMobile 

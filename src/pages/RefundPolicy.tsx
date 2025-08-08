@@ -4,6 +4,10 @@ import Footer from "@/components/Footer";
 const CancellationAndRefundPolicy = () => {
   return (
     <div className="min-h-screen bg-white">
+      {/* Compliance Disclaimer */}
+      <div className="w-full bg-yellow-100 border-b border-yellow-300 text-yellow-900 text-center py-2 px-4 text-xs sm:text-sm">
+        <strong>Disclaimer:</strong> All tokens and coins on this platform are for community engagement, recognition, or access to non-financial benefits only. They do not represent any monetary value, are not tradable, and are not digital virtual assets or cryptocurrencies. Quant Basket does not offer, sell, or facilitate trading of digital virtual assets. All features are for community and educational use only, in compliance with Indian law.
+      </div>
       <Navigation />
       
       {/* Hero Section */}
