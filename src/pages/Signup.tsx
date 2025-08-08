@@ -88,7 +88,7 @@ const Signup = () => {
 
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-qb-green/20 rounded-lg flex items-center justify-center">
+                <div className="w-12 aspect-square bg-qb-green/20 rounded-lg flex items-center justify-center">
                   <TrendingUp className="w-6 h-6 text-qb-green" />
                 </div>
                 <div>
@@ -98,7 +98,7 @@ const Signup = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-qb-blue/20 rounded-lg flex items-center justify-center">
+                <div className="w-12 aspect-square bg-qb-blue/20 rounded-lg flex items-center justify-center">
                   <Users className="w-6 h-6 text-qb-blue" />
                 </div>
                 <div>
@@ -108,7 +108,7 @@ const Signup = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-qb-green/20 rounded-lg flex items-center justify-center">
+                <div className="w-12 aspect-square bg-qb-green/20 rounded-lg flex items-center justify-center">
                   <Gem className="w-6 h-6 text-qb-green" />
                 </div>
                 <div>
@@ -118,7 +118,7 @@ const Signup = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-qb-blue/20 rounded-lg flex items-center justify-center">
+                <div className="w-12 aspect-square bg-qb-blue/20 rounded-lg flex items-center justify-center">
                   <BarChart3 className="w-6 h-6 text-qb-blue" />
                 </div>
                 <div>
