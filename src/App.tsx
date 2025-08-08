@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, useNavigate, useLocation } from "react-ro
 import { AuthProvider, useAuth } from "@/hooks/useAuth";
 import Index from "./pages/Index";
 import About from "./pages/About";
+import Products from "./pages/Products";
 import CommunityTokens from "./pages/CommunityTokens";
 import Pricing from "./pages/Pricing";
 import Support from "./pages/Support";
@@ -89,10 +90,11 @@ const AppContent = () => {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Products />} />
         <Route path="/community-tokens" element={<CommunityTokens />} />
         <Route path="/pricing" element={<Pricing />} />
-            <Route path="/learn" element={<Learn />} />
-            <Route path="/resources" element={<Resources />} />
+        <Route path="/learn" element={<Learn />} />
+        <Route path="/resources" element={<Resources />} />
         <Route path="/support" element={<Support />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />

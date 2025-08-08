@@ -103,7 +103,7 @@ const Index = () => {
               </h2>
               <p className="text-base sm:text-lg text-qb-dark-gray mb-6 px-2 sm:px-0">
                 Create and participate in community currencies that reward impactful actions. Earn tokens for contributing 
-                to community goals, participate in governance, and build wealth through collective success.
+                to community goals, participate in governance, and build community through collective success.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 lg:mb-8">
                 <Card className="glass-card">
@@ -164,7 +164,7 @@ const Index = () => {
                 <span className="bg-qb-blue/20 text-qb-blue px-3 py-1 rounded-full text-sm font-medium">Planned</span>
               </div>
               <p className="text-base sm:text-lg text-qb-dark-gray mb-6 px-2 sm:px-0">
-                Future feature: Invest in tokenized ETFs backed by real shares and commodities. Our financial engineers will create 
+                Future feature: Get tokenized Strategies backed by real Quant strategies. Our financial engineers will create 
                 sophisticated mathematical models and algorithmic strategies for optimal returns.
               </p>
               <div className="space-y-4">
@@ -198,7 +198,7 @@ const Index = () => {
                 <span className="bg-qb-green/20 text-qb-green px-3 py-1 rounded-full text-sm font-medium">Coming Soon</span>
               </div>
               <p className="text-base sm:text-lg text-qb-dark-gray mb-6 px-2 sm:px-0">
-                Future expansion: A marketplace for impact-driven projects and ESG-compliant investments. Start with community tokens now and access the broader ecosystem as we expand.
+                Future expansion: A marketplace for impact-driven projects and ESG-compliant systems. Start with community tokens now and access the broader ecosystem as we expand.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <Card className="glass-card">
@@ -276,7 +276,7 @@ const Index = () => {
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-qb-dark-gray">Invest in sustainable and socially responsible projects</p>
+                <p className="text-qb-dark-gray">Get into sustainable and socially responsible projects</p>
               </CardContent>
             </Card>
             
@@ -289,7 +289,7 @@ const Index = () => {
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-qb-dark-gray">Access advanced algorithmic trading strategies</p>
+                <p className="text-qb-dark-gray">Access advanced algorithmic market strategies</p>
               </CardContent>
             </Card>
             
