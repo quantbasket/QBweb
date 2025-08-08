@@ -14,17 +14,18 @@ const Products = () => {
     // Link to coming soon page instead of app stores
     window.location.href = '/coming-soon';
   };
+  
   const products = [
     {
       title: "Community Tokens",
       icon: Users,
-      description: "Create and trade community currencies that reward meaningful actions aligned with community goals and values.",
+      description: "Create and manage digital tokens that reward meaningful actions and align with your community's goals and values.",
       features: [
         "Reward-based token distribution",
         "Community goal alignment",
-        "Democratic governance voting",
-        "Impact-driven economics",
-        "Collective wealth building"
+        "On-platform governance tools",
+        "Incentivize participation",
+        "Recognize key contributions"
       ],
       badge: "Available Now",
       color: "qb-green",
@@ -33,13 +34,13 @@ const Products = () => {
     {
       title: "Impact Coins",
       icon: Globe,
-      description: "Future feature: Sustainable investment tokens backed by ESG-compliant projects and impact metrics.",
+      description: "Future feature: Launch tokens linked to ESG-compliant projects, with transparent tracking of impact metrics.",
       features: [
         "ESG compliance tracking",
-        "Impact measurement",
-        "Sustainable returns",
-        "Social responsibility",
-        "Environmental benefits"
+        "Verifiable impact measurement",
+        "Tied to real-world outcomes",
+        "Promote social responsibility",
+        "Showcase environmental benefits"
       ],
       badge: "Coming Soon",
       color: "qb-blue",
@@ -48,13 +49,13 @@ const Products = () => {
     {
       title: "Quant Strategies",
       icon: BarChart3,
-      description: "Planned feature: Mathematical trading strategies with advanced model implementations and algorithmic systems.",
+      description: "Planned feature: Apply mathematical models and data analysis to uncover insights within the platform's ecosystem.",
       features: [
-        "Mathematically backed models",
-        "Algorithmic execution",
-        "Risk optimization",
-        "Quantitative analysis",
-        "Professional strategies"
+        "Data-backed analytical models",
+        "Automated insight generation",
+        "Ecosystem trend analysis",
+        "Quantitative activity analysis",
+        "Advanced modeling tools"
       ],
       badge: "Planned",
       color: "qb-green",
@@ -63,13 +64,13 @@ const Products = () => {
     {
       title: "Tokenized Portfolios",
       icon: TrendingUp,
-      description: "Future expansion: Community-created portfolios combining multiple assets and strategies into tradeable token baskets.",
+      description: "Future expansion: Curate collections of various tokens and projects available on the platform into thematic bundles.",
       features: [
-        "Multi-asset baskets",
-        "Strategy combination",
+        "Multi-token collections",
+        "Thematic bundling of projects",
         "Transparent composition",
-        "Community management",
-        "Diversified exposure"
+        "Broaden platform participation",
+        "Curate based on themes or goals"
       ],
       badge: "Planned",
       color: "qb-blue",
@@ -82,15 +83,14 @@ const Products = () => {
       <Navigation />
       
       {/* Hero Section */}
-            {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className={`font-bold text-gray-900 mb-6 ${isMobile ? 'text-3xl' : 'text-5xl'}`}>
-              Revolutionary Trading Solutions
+              Pioneering Tools for Digital Ecosystems
             </h1>
             <p className={`text-gray-600 mb-8 leading-relaxed ${isMobile ? 'text-lg px-2' : 'text-xl'}`}>
-              Experience the future of algorithmic trading with our cutting-edge products designed for traders of all levels
+              Explore our cutting-edge products designed to build, measure, and grow digital communities and initiatives.
             </p>
             {isMobile ? (
               <div className="flex justify-center">
@@ -167,42 +167,21 @@ const Products = () => {
                   </div>
                   
                   <div className="pt-4">
-                    {isMobile ? (
-                      product.available ? (
-                        <Link to="/community-tokens" className="w-full">
-                          <Button variant="qbPrimary" className="w-full">
-                            Learn More
-                            <ArrowRight className="ml-2 w-4 h-4" />
-                          </Button>
-                        </Link>
-                      ) : (
-                        <Button 
-                          variant="qbSecondary" 
-                          className="w-full"
-                          disabled={true}
-                        >
-                          Coming Soon
+                    {product.available ? (
+                      <Link to="/community-tokens" className="w-full">
+                        <Button variant="qbPrimary" className="w-full">
+                          Learn More
                           <ArrowRight className="ml-2 w-4 h-4" />
                         </Button>
-                      )
+                      </Link>
                     ) : (
-                      product.available && product.title === "Community Tokens" ? (
-                        <Link to="/community-tokens" className="w-full">
-                          <Button variant="qbPrimary" className="w-full">
-                            Learn More
-                            <ArrowRight className="ml-2 w-4 h-4" />
-                          </Button>
-                        </Link>
-                      ) : (
-                        <Button 
-                          variant={product.available ? "qbPrimary" : "qbSecondary"} 
-                          className="w-full"
-                          disabled={!product.available}
-                        >
-                          {product.available ? "Get Started" : "Coming Soon"}
-                          <ArrowRight className="ml-2 w-4 h-4" />
-                        </Button>
-                      )
+                      <Button 
+                        variant="qbSecondary" 
+                        className="w-full"
+                        disabled={true}
+                      >
+                        Coming Soon
+                      </Button>
                     )}
                   </div>
                 </CardContent>
@@ -218,7 +197,7 @@ const Products = () => {
           <div className="text-center mb-12">
             <h2 className={`font-bold text-qb-navy mb-6 ${isMobile ? 'text-2xl' : 'text-4xl'}`}>Platform Features</h2>
             <p className={`text-qb-dark-gray ${isMobile ? 'text-base px-2' : 'text-lg'}`}>
-              Advanced capabilities that power all our products
+              Advanced capabilities that power all our products.
             </p>
           </div>
           
@@ -230,7 +209,7 @@ const Products = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-qb-dark-gray">
-                  Monitor performance, risk metrics, and market data in real-time 
+                  Monitor platform activity, engagement metrics, and ecosystem data in real-time 
                   with our advanced analytics dashboard.
                 </p>
               </CardContent>
@@ -239,12 +218,12 @@ const Products = () => {
             <Card className="glass-card text-center">
               <CardHeader>
                 <Shield className="w-12 h-12 text-qb-blue mx-auto mb-4" />
-                <CardTitle className="text-qb-navy">Bank-grade Security</CardTitle>
+                <CardTitle className="text-qb-navy">Enterprise-Grade Security</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-qb-dark-gray">
-                  Multi-layered security protocols including smart contract audits, 
-                  cold storage, and institutional-grade encryption.
+                  Multi-layered security protocols, platform audits, 
+                  and robust institutional-grade data encryption.
                 </p>
               </CardContent>
             </Card>
@@ -256,8 +235,8 @@ const Products = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-qb-dark-gray">
-                  Participate in governance decisions and shape the future 
-                  of the platform through democratic voting mechanisms.
+                  Participate in governance and shape the future 
+                  of the platform through democratic on-platform mechanisms.
                 </p>
               </CardContent>
             </Card>
@@ -272,17 +251,17 @@ const Products = () => {
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-qb-navy mb-6">Built on Cutting-Edge Technology</h2>
               <p className="text-lg text-qb-dark-gray">
-                Our platform leverages the latest advances in blockchain, AI, and quantitative finance
+                Our platform leverages the latest advances in blockchain, AI, and data science.
               </p>
             </div>
             
             <div className="grid gap-8 grid-cols-2 md:grid-cols-4">
               <div className="text-center">
                 <div className="w-16 h-16 bg-qb-green/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <span className="font-bold text-qb-green">ETH</span>
+                  <span className="font-bold text-qb-green">Chain</span>
                 </div>
-                <h3 className="font-semibold text-qb-navy">Ethereum</h3>
-                <p className="text-sm text-qb-dark-gray">Smart contracts</p>
+                <h3 className="font-semibold text-qb-navy">Blockchain Tech</h3>
+                <p className="text-sm text-qb-dark-gray">For transparent activity</p>
               </div>
               
               <div className="text-center">
@@ -290,23 +269,23 @@ const Products = () => {
                   <span className="font-bold text-qb-blue">AI</span>
                 </div>
                 <h3 className="font-semibold text-qb-navy">Machine Learning</h3>
-                <p className="text-sm text-qb-dark-gray">Predictive models</p>
+                <p className="text-sm text-qb-dark-gray">For predictive insights</p>
               </div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-qb-green/20 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <span className="font-bold text-qb-green">Q</span>
                 </div>
-                <h3 className="font-semibold text-qb-navy">Quantitative</h3>
-                <p className="text-sm text-qb-dark-gray">Financial models</p>
+                <h3 className="font-semibold text-qb-navy">Quantitative Analysis</h3>
+                <p className="text-sm text-qb-dark-gray">For data-driven models</p>
               </div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-qb-blue/20 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <span className="font-bold text-qb-blue">API</span>
                 </div>
-                <h3 className="font-semibold text-qb-navy">Integration</h3>
-                <p className="text-sm text-qb-dark-gray">Third-party tools</p>
+                <h3 className="font-semibold text-qb-navy">Integrations</h3>
+                <p className="text-sm text-qb-dark-gray">Connect third-party tools</p>
               </div>
             </div>
           </div>
@@ -320,11 +299,11 @@ const Products = () => {
             Ready to Explore Our Products?
           </h2>
           <p className={`text-gray-200 mb-8 ${isMobile ? 'text-lg px-2' : 'text-xl'}`}>
-            Start with Community Tokens and be part of our ecosystem as we expand with new features.
+            Start with our available products and be part of our ecosystem as we expand with new features.
           </p>
           {isMobile ? (
             <div className="space-y-3">
-              <Link to="/community-tokens" className="block">
+              <Link to="/signup" className="block">
                 <Button variant="qbPrimary" size="lg" className="text-lg px-12 w-full">
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -338,7 +317,7 @@ const Products = () => {
               </Link>
             </div>
           ) : (
-            <Link to="/community-tokens">
+            <Link to="/signup">
               <Button variant="qbPrimary" size="lg" className="text-lg px-12">
                 Get Started Now
                 <ArrowRight className="ml-2 w-5 h-5" />

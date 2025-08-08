@@ -21,7 +21,7 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       {/* Compliance Disclaimer */}
       <div className="w-full bg-yellow-100 border-b border-yellow-300 text-yellow-900 text-center py-2 px-4 text-xs sm:text-sm">
-        <strong>Disclaimer:</strong> In compliance with Indian law, this payment is for platform services only, not for the purchase of any tradable Virtual Digital Asset. All tokens are non-monetary rewards for community use only.
+        <strong>Disclaimer:</strong> All tokens and coins on this platform are for community engagement, recognition, or access to non-financial benefits only. They do not represent any monetary value.
 
       </div>
       <Navigation />
@@ -33,12 +33,12 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="text-white text-center lg:text-left">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 lg:mb-6">
-                Engineered Portfolios.
-                <span className="text-qb-green block">Decentralized Access.</span>
+                Digital Tokens.
+                <span className="text-qb-green block">Connection & Impact</span>
               </h1>
               <p className="text-lg sm:text-xl mb-6 lg:mb-8 text-gray-200 px-2 sm:px-0">
                 Launch your community token today! Create community-driven tokens that reward impactful actions.
-                <span className="block text-base sm:text-lg text-qb-green mt-2">Additional features like quant strategies coming soon.</span>
+                <span className="block text-base sm:text-lg text-qb-green mt-2">Additional educational features coming soon.</span>
               </p>
               
               {/* Mobile App Download Buttons */}
@@ -104,11 +104,10 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="text-center lg:text-left">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-qb-navy mb-4 lg:mb-6">
-                Community Coins & Tokenization
+                Community Coins & Tokenization (Non-Financial)
               </h2>
               <p className="text-base sm:text-lg text-qb-dark-gray mb-6 px-2 sm:px-0">
-                Create and participate in community currencies that reward impactful actions. Earn tokens for contributing 
-                to community goals, participate in governance, and build community through collective success.
+                Create and participate in community coins that reward positive actions and engagement. These coins are for recognition and access to community benefits (like webinars or events) and cannot be traded, sold, or redeemed for cash or any financial asset.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 lg:mb-8">
                 <Card className="glass-card">
@@ -164,13 +163,13 @@ const Index = () => {
             <div className={`text-center lg:text-left ${isMobile ? 'order-last' : ''}`}>
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mb-4">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-qb-navy text-center lg:text-left">
-                  Tokenized Quant Strategies
+                  Tokenized Quant Strategies (Educational)
                 </h2>
                 <span className="bg-qb-blue/20 text-qb-blue px-3 py-1 rounded-full text-sm font-medium">Planned</span>
+                  <span className="bg-qb-blue/20 text-qb-blue px-3 py-1 rounded-full text-sm font-medium">Educational</span>
               </div>
               <p className="text-base sm:text-lg text-qb-dark-gray mb-6 px-2 sm:px-0">
-                Future feature: Get tokenized Strategies backed by real Quant strategies. Our financial engineers will create 
-                sophisticated mathematical models and algorithmic strategies for optimal returns.
+                Future feature: Learn about tokenized strategies and quantitative models. All strategies are for educational and informational purposes only. No investment, trading, or financial returns are offered.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3 text-center sm:text-left">
@@ -178,6 +177,7 @@ const Index = () => {
                   <div>
                     <h3 className="font-semibold text-qb-navy">Advanced Analytics</h3>
                     <p className="text-qb-dark-gray">Real-time risk assessment and portfolio optimization</p>
+                    <p className="text-qb-dark-gray">Real-time risk assessment and portfolio optimization for learning purposes only. No financial advice or products.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3 text-center sm:text-left">
@@ -185,6 +185,7 @@ const Index = () => {
                   <div>
                     <h3 className="font-semibold text-qb-navy">Algorithmic Strategies</h3>
                     <p className="text-qb-dark-gray">Automated execution of complex strategies</p>
+                    <p className="text-qb-dark-gray">Automated execution of complex strategies for demonstration and education. Not for trading or investment.</p>
                   </div>
                 </div>
               </div>
@@ -200,10 +201,10 @@ const Index = () => {
             <div className="text-center lg:text-left">
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mb-4">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-qb-navy">Impact Marketplace</h2>
-                <span className="bg-qb-green/20 text-qb-green px-3 py-1 rounded-full text-sm font-medium">Coming Soon</span>
+                <span className="bg-qb-green/20 text-qb-green px-3 py-1 rounded-full text-sm font-medium">Community Recognition</span>
               </div>
               <p className="text-base sm:text-lg text-qb-dark-gray mb-6 px-2 sm:px-0">
-                Future expansion: A marketplace for impact-driven projects and ESG-compliant systems. Start with community tokens now and access the broader ecosystem as we expand.
+                Future expansion: A marketplace for recognizing impact-driven projects and community achievements. All features are for recognition and engagement only, not for financial gain or investment.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <Card className="glass-card">
@@ -220,7 +221,7 @@ const Index = () => {
                     <TrendingUp className={`w-8 h-8 text-qb-blue mb-2 ${isMobile ? 'mb-0 flex-shrink-0' : 'mx-auto sm:mx-0'}`} />
                     <div className={isMobile ? 'flex-1' : ''}>
                       <h3 className={`font-semibold text-qb-navy ${isMobile ? 'text-left' : 'text-center sm:text-left'}`}>Measurable Impact</h3>
-                      <p className={`text-sm text-qb-dark-gray ${isMobile ? 'text-left' : 'text-center sm:text-left'}`}>Track real-world outcomes and financial returns</p>
+                      <p className={`text-sm text-qb-dark-gray ${isMobile ? 'text-left' : 'text-center sm:text-left'}`}>Track real-world outcomes and community recognition. No financial returns or investments are offered.</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -277,11 +278,11 @@ const Index = () => {
                 <Coins className="w-12 h-12 text-qb-blue mx-auto mb-4" />
                 <div className="text-center">
                   <CardTitle className="text-qb-navy mb-2">Impact Coins</CardTitle>
-                  <span className="bg-qb-green/20 text-qb-green px-2 py-1 rounded text-xs">Coming Soon</span>
+                  <span className="bg-qb-green/20 text-qb-green px-2 py-1 rounded text-xs">Recognition Only</span>
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-qb-dark-gray">Get into sustainable and socially responsible projects</p>
+                <p className="text-qb-dark-gray">Earned for making a positive impact in the community. Impact Coins are recognition tokens only and have no financial value.</p>
               </CardContent>
             </Card>
             

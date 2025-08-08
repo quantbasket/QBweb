@@ -14,11 +14,11 @@ const Pricing = () => {
       name: "Free",
       price: "0",
       period: "forever",
-      description: "Perfect for getting started with community tokens",
+      description: "Perfect for getting started with community engagement",
       icon: Star,
       popular: false,
       features: [
-        "Create basic community coins",
+        "Create a basic community token",
         "Community forum access",
         "Educational resources",
         "Mobile app access",
@@ -34,35 +34,35 @@ const Pricing = () => {
       name: "Standard",
       price: "50",
       period: "per month",
-      description: "Advanced community token features for growing communities",
+      description: "Advanced tools and features for growing communities",
       icon: Zap,
       popular: true,
       features: [
         "All Free plan features",
-        "Create up to 5 community tokens",
+        "Create up to 5 unique community tokens",
         "Advanced token customization",
         "Community governance tools",
         "Advanced analytics dashboard",
-        "API access",
+        "API access for custom integrations",
         "Priority email support",
         "Webinar access",
         "Custom reward mechanisms"
       ],
       limitations: [
-        "Standard execution speed"
+        "Standard processing priority"
       ]
     },
     {
       name: "Pro",
       price: "Currently Not Available",
       period: "",
-      description: "Enterprise-grade community token solutions",
+      description: "Enterprise-grade solutions for large-scale communities",
       icon: Crown,
       popular: false,
       available: false,
       features: [
         "All Standard plan features",
-        "Unlimited community token creation",
+        "Unlimited community tokens",
         "White-label community solutions",
         "Dedicated account manager",
         "Advanced governance features",
@@ -76,6 +76,10 @@ const Pricing = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Compliance Disclaimer */}
+      <div className="w-full bg-yellow-100 border-b border-yellow-300 text-yellow-900 text-center py-2 px-4 text-xs sm:text-sm">
+        <strong>Disclaimer:</strong> This payment is for platform features, not for crypto or digital assets. Our non-tradable tokens are for community engagement only and have no monetary value.
+      </div>
       <Navigation />
 
       {/* Hero Section */}
@@ -85,7 +89,7 @@ const Pricing = () => {
             Choose Your Plan
           </h1>
           <p className="text-xl text-gray-200">
-            Flexible pricing options designed to grow with your investment journey
+            Flexible plans designed to help you build, engage, and grow your community.
           </p>
         </div>
       </section>
@@ -172,7 +176,6 @@ const Pricing = () => {
                         </Button>
                     </Link>
                   ) : (
-                    // Link for Standard and Pro (if Pro becomes available for trial)
                     <Link to={`/signup?plan=${plan.name.toLowerCase()}`} className="w-full">
                         <Button
                             variant={plan.popular ? "qbPrimary" : "qbOutline"}
@@ -195,9 +198,9 @@ const Pricing = () => {
       <section className="section-gradient py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-qb-navy mb-6">All Plans Include</h2>
+            <h2 className="text-4xl font-bold text-qb-navy mb-6">Core Features for Every Community</h2>
             <p className="text-lg text-qb-dark-gray">
-              Core features available for community token management
+              The essential tools for managing and engaging your members.
             </p>
           </div>
 
@@ -207,7 +210,7 @@ const Pricing = () => {
                 <Check className="w-6 h-6 text-qb-green" />
               </div>
               <h3 className="font-semibold text-qb-navy mb-2">Secure Platform</h3>
-              <p className="text-sm text-qb-dark-gray">Bank-grade security for all transactions</p>
+              <p className="text-sm text-qb-dark-gray">Bank-grade security to protect your community's data.</p>
             </div>
 
             <div className="text-center">
@@ -215,7 +218,7 @@ const Pricing = () => {
                 <Check className="w-6 h-6 text-qb-blue" />
               </div>
               <h3 className="font-semibold text-qb-navy mb-2">Mobile Access</h3>
-              <p className="text-sm text-qb-dark-gray">Trade and monitor on the go</p>
+              <p className="text-sm text-qb-dark-gray">Manage and engage with your community on the go.</p>
             </div>
 
             <div className="text-center">
@@ -223,7 +226,7 @@ const Pricing = () => {
                 <Check className="w-6 h-6 text-qb-green" />
               </div>
               <h3 className="font-semibold text-qb-navy mb-2">Community Forum</h3>
-              <p className="text-sm text-qb-dark-gray">Connect with other investors</p>
+              <p className="text-sm text-qb-dark-gray">Connect with other community builders.</p>
             </div>
 
             <div className="text-center">
@@ -231,7 +234,7 @@ const Pricing = () => {
                 <Check className="w-6 h-6 text-qb-blue" />
               </div>
               <h3 className="font-semibold text-qb-navy mb-2">Community Resources</h3>
-              <p className="text-sm text-qb-dark-gray">Learn about community tokenization</p>
+              <p className="text-sm text-qb-dark-gray">Learn best practices for community building.</p>
             </div>
           </div>
         </div>
@@ -263,7 +266,7 @@ const Pricing = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-qb-dark-gray">
-                  Yes, both Standard and Pro plans come with a 14-day free trial.
+                  Yes, our Standard plan comes with a 14-day free trial.
                   No credit card required to start your trial.
                 </p>
               </CardContent>
@@ -275,7 +278,7 @@ const Pricing = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-qb-dark-gray">
-                  We accept all major credit cards, bank transfers, and select cryptocurrencies.
+                  We accept all major credit cards and bank transfers.
                   All payments are processed securely with enterprise-grade encryption.
                 </p>
               </CardContent>

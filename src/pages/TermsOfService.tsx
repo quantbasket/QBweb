@@ -85,7 +85,7 @@ const TermsOfService = () => {
 
               <h2 className="text-3xl font-semibold mb-4 text-qb-navy">8. Governing Law</h2>
               <p className="mb-6 text-qb-dark-gray">
-                These Terms shall be governed by and construed in accordance with the laws of the State of Karnatak, India, without regard to its conflict of law principles.
+                These Terms shall be governed by and construed in accordance with the laws of the State of Karnataka, India, without regard to its conflict of law principles.
               </p>
 
               <h2 className="text-3xl font-semibold mb-4 text-qb-navy">9. Changes to These Terms</h2>

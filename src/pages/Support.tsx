@@ -4,100 +4,100 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { HelpCircle, Book, MessageCircle, Mail } from "lucide-react";
+import { HelpCircle, Book, MessageCircle, Mail, Users, Gem, Shield, CreditCard } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useNavigate } from "react-router-dom";
 
 const Support = () => {
   const isMobile = useIsMobile();
-  
   const navigate = useNavigate();
 
-const handleResourcesClick = () => {
-  navigate('/resources');
-};
+  const handleResourcesClick = () => {
+    navigate('/resources');
+  };
 
   const handleEmailSupport = () => {
     window.location.href = 'mailto:support@quantbasket.com';
   };
+  
   const categories = [
     {
-      title: "Quantitative Financial Engineering",
-      description: "Understanding the mathematical models behind our strategies",
-      icon: HelpCircle,
+      title: "Getting Started",
+      description: "Setting up your account and first community",
+      icon: Users,
       color: "qb-green",
       faqs: [
         {
-          question: "What is quantitative financial engineering?",
-          answer: "Quantitative financial engineering applies mathematical models to create crypto tokens and trading strategies. Our engineers build mathematically backed coins, algorithmic trading systems, and tokenized ETFs backed by real assets, bringing institutional-grade mathematics to community-driven crypto platforms."
+          question: "How do I create an account?",
+          answer: "You can create a free account by clicking the 'Sign Up' button on our homepage. All you need is a valid email address to get started with our Free plan and create your first community."
         },
         {
-          question: "How do community coins reward meaningful actions?",
-          answer: "Community coins are distributed when members complete actions that align with community goals. Whether it's environmental initiatives, educational contributions, or community building, our smart contracts automatically reward participants with tokens that have real economic value within the community ecosystem."
+          question: "What can I do with the Free plan?",
+          answer: "The Free plan is perfect for getting started. It allows you to create one community, design a basic community token, access our educational resources, and use the community forum."
         },
         {
-          question: "How are tokenized ETFs backed by real assets?",
-          answer: "Our tokenized ETFs represent fractional ownership of real shares, commodities, and bonds held in secure custody. Each token is backed 1:1 by actual assets, verified through regular audits and blockchain transparency, enabling global access to traditional markets through crypto wallets."
+          question: "How do I set up my first community space?",
+          answer: "Once you sign up, our onboarding guide will walk you through the simple steps of naming your community, describing its purpose, and creating your first token for member engagement."
         }
       ]
     },
     {
-      title: "Cryptocurrency & DeFi",
-      description: "Everything about digital assets and decentralized finance",
-      icon: Book,
+      title: "Community Tokens & Rewards",
+      description: "Understanding tokens and reward mechanisms",
+      icon: Gem,
       color: "qb-blue",
       faqs: [
         {
-          question: "How does DeFi integration work on your platform?",
-          answer: "Our platform integrates with various DeFi protocols to provide liquidity, yield farming opportunities, and automated market making. We use smart contracts to ensure transparent and secure interactions with decentralized protocols while maintaining the sophisticated risk management of traditional finance."
+          question: "Are community tokens a form of cryptocurrency?",
+          answer: "No. Community tokens on our platform are for engagement and recognition only. They do not have monetary value, are not tradable on exchanges, and are not cryptocurrencies, in compliance with Indian law."
         },
         {
-          question: "What cryptocurrencies can I use on the platform?",
-          answer: "We support major cryptocurrencies including Bitcoin (BTC), Ethereum (ETH), and various stablecoins (USDC, USDT, DAI). Our platform also supports DeFi tokens and governance tokens from major protocols. All crypto transactions are secured through multi-signature wallets and smart contract audits."
+          question: "How do I reward members with tokens?",
+          answer: "On our Standard plan, you can set up automated rules to reward members. For example, you can automatically distribute tokens when a member posts helpful content, welcomes a new user, or participates in a poll."
         },
         {
-          question: "How do you ensure security in crypto transactions?",
-          answer: "We implement multiple layers of security including cold storage for majority of funds, multi-signature wallets, smart contract audits by leading security firms, and real-time monitoring systems. Our platform follows industry best practices and maintains insurance coverage for digital assets."
+          question: "What can members do with the tokens they earn?",
+          answer: "Tokens can be used to unlock special roles, gain access to exclusive content or channels, vote in community polls, or simply as a badge of honor to show their contribution and status within the community."
         }
       ]
     },
     {
-      title: "Blockchain & Tokenomics",
-      description: "Understanding blockchain technology and token economics",
-      icon: MessageCircle,
+      title: "Platform Features & Security",
+      description: "How our platform works and keeps you safe",
+      icon: Shield,
       color: "qb-green",
       faqs: [
         {
-          question: "How does tokenization work on your platform?",
-          answer: "Tokenization on our platform involves converting traditional financial assets or strategies into digital tokens on the blockchain. Each token represents fractional ownership and comes with programmable features like automatic dividend distribution, governance rights, and liquidity options."
+          question: "How do you ensure my data is secure?",
+          answer: "We implement multiple layers of security, including enterprise-grade encryption for all user and community data, regular platform audits, and adherence to industry best practices for data security and privacy."
         },
         {
-          question: "What blockchain networks do you support?",
-          answer: "We primarily operate on Ethereum for maximum compatibility with DeFi protocols, but also support Polygon for lower transaction costs and faster settlements. We're continuously evaluating other Layer 1 and Layer 2 solutions to provide the best user experience."
+          question: "What is the analytics dashboard?",
+          answer: "The analytics dashboard (available on paid plans) provides insights into your community's health. You can track member engagement, see who your most active contributors are, and understand what content resonates most with your audience."
         },
         {
-          question: "How are governance tokens distributed and used?",
-          answer: "Governance tokens are distributed to platform users based on their participation, investment amounts, and community contributions. These tokens allow holders to vote on platform upgrades, new product launches, fee structures, and strategic decisions through our decentralized governance system."
+          question: "What technology does the platform use?",
+          answer: "Our platform uses a modern technology stack, including blockchain for a transparent and verifiable ledger of non-monetary token rewards. This ensures that all community activity and recognition is recorded fairly and cannot be altered."
         }
       ]
     },
     {
-      title: "Impact & Community Coins",
-      description: "Sustainable investing and community-driven tokenization",
-      icon: Mail,
+      title: "Billing & Subscriptions",
+      description: "Managing your plan and payment details",
+      icon: CreditCard,
       color: "qb-blue",
       faqs: [
         {
-          question: "How do you measure the impact of Impact Coins?",
-          answer: "We use standardized ESG metrics and work with third-party auditors to verify impact claims. Each Impact Coin project includes measurable outcomes such as carbon reduction, social benefit metrics, and sustainable development goal (SDG) alignment. Regular impact reports are published and blockchain-verified."
+          question: "What payment methods do you accept for subscriptions?",
+          answer: "We accept all major credit cards and bank transfers for our subscription plans. All payments are processed through a secure, PCI-compliant payment provider."
         },
         {
-          question: "What makes Community Coins different from regular tokens?",
-          answer: "Community Coins are designed with democratic governance at their core. Unlike traditional tokens, they include mechanisms for community proposal submission, transparent voting, revenue sharing among holders, and collaborative decision-making on project direction and resource allocation."
+          question: "Can I change my plan at any time?",
+          answer: "Yes, you can upgrade or downgrade your plan from your account settings. Upgrades are applied immediately, while downgrades take effect at the end of your current billing cycle."
         },
         {
-          question: "How can I participate in community governance?",
-          answer: "Token holders can participate by submitting proposals through our governance portal, voting on active proposals, delegating voting power to trusted community members, and participating in community discussions. The weight of your vote corresponds to your token holdings and community participation history."
+          question: "How does the 14-day free trial work?",
+          answer: "Our Standard plan comes with a 14-day free trial. You get full access to all its features without needing a credit card. At the end of the trial, you can choose to subscribe or your account will automatically be transitioned to our Free plan."
         }
       ]
     }
@@ -105,24 +105,24 @@ const handleResourcesClick = () => {
 
   const additionalFaqs = [
     {
-      question: "What is the minimum investment amount?",
-      answer: "The minimum investment varies by product. For Community Tokens, the minimum is $10. Impact Coins start at $25, Quant Strategies require $100 minimum, and Tokenized Portfolios start at $500. Free plan users have lower limits as specified in our pricing section."
+      question: "Is there a mobile app?",
+      answer: "Yes, our mobile app is available to all users and allows you to manage your community, engage with members, and track activity on the go. You can download it from the app stores."
     },
     {
-      question: "How are fees structured on the platform?",
-      answer: "We use a transparent fee structure: 0.5% management fee for tokenized portfolios, 0.25% transaction fee for token trades, and performance fees ranging from 10-20% depending on the strategy's complexity and performance. Detailed fee breakdowns are provided before any investment."
+      question: "What kind of support do you offer?",
+      answer: "We offer email support for all users. Users on our Standard plan receive priority email support. Our Pro plan includes a dedicated account manager and 24/7 phone support."
     },
     {
-      question: "What regulatory compliance measures do you follow?",
-      answer: "We comply with relevant financial regulations including KYC/AML requirements, securities laws where applicable, and maintain appropriate licenses. Our legal team continuously monitors regulatory developments in both traditional finance and cryptocurrency sectors to ensure ongoing compliance."
+      question: "What are 'Impact Projects'?",
+      answer: "Impact Projects are a feature that allows communities to rally around specific, non-financial goals, such as environmental or social initiatives. You can use tokens to track and reward contributions towards these collective goals."
     },
     {
-      question: "How can I withdraw my investments?",
-      answer: "Most investments can be withdrawn with standard settlement periods: 1-3 days for liquid tokens, 5-7 days for quant strategies, and up to 30 days for some impact investments. Withdrawal methods include bank transfer, cryptocurrency transfer, or reinvestment into other platform products."
+      question: "How is my personal data protected?",
+      answer: "We are committed to data privacy and comply with all relevant data protection regulations. We do not sell your personal data. Please refer to our Privacy Policy for detailed information."
     },
     {
-      question: "Do you provide tax reporting assistance?",
-      answer: "Yes, we provide comprehensive tax reporting including transaction histories, gain/loss calculations, and forms compatible with major tax software. For Pro plan users, we offer consultation with tax professionals familiar with cryptocurrency and complex financial instruments."
+      question: "Can I delete my account and community data?",
+      answer: "Yes, you can request the deletion of your account and all associated community data at any time by contacting our support team. The process is irreversible and will permanently remove all your information from our platform."
     }
   ];
 
@@ -137,7 +137,7 @@ const handleResourcesClick = () => {
             Support Center
           </h1>
           <p className="text-xl text-gray-200">
-            Find answers to your questions about quantitative finance, crypto, and our platform
+            Find answers to your questions about our community engagement platform.
           </p>
         </div>
       </section>
@@ -185,7 +185,7 @@ const handleResourcesClick = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-qb-navy mb-6">General Questions</h2>
             <p className="text-lg text-qb-dark-gray">
-              Common questions about using our platform
+              Common questions about using our platform.
             </p>
           </div>
           
@@ -213,7 +213,7 @@ const handleResourcesClick = () => {
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-qb-navy mb-6">Still Need Help?</h2>
           <p className="text-lg text-qb-dark-gray mb-8">
-            Our support team is here to assist you with any questions not covered in our FAQ
+            Our support team is here to assist you with any questions not covered in our FAQ.
           </p>
           
           <div className={`gap-6 ${isMobile ? 'grid grid-cols-2' : 'grid grid-cols-1 md:grid-cols-3'}`}>
@@ -224,16 +224,16 @@ const handleResourcesClick = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-qb-dark-gray mb-4">
-                  Get detailed help via email support
+                  Get detailed help via email support.
                 </p>
                 <Button 
                   variant="outline" 
                   size="sm" 
                   onClick={handleEmailSupport}
-                  className="bg-qb-green/20 text-qb-green border-qb-green hover:bg-qb-green hover:text-white w-32 h-8" // Add custom width and height
+                  className="bg-qb-green/20 text-qb-green border-qb-green hover:bg-qb-green hover:text-white w-32 h-8"
                 >
                   <Mail className="w-4 h-4 mr-2" />
-                  Send mail
+                  Send Mail
                 </Button>
               </CardContent>
             </Card>
@@ -245,7 +245,7 @@ const handleResourcesClick = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-qb-dark-gray mb-4">
-                  Instant help during business hours
+                  Instant help during business hours.
                 </p>
                 <Badge variant="secondary" className="bg-qb-blue/20 text-qb-blue">
                   Available 9AM-6PM IST
@@ -260,17 +260,17 @@ const handleResourcesClick = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-qb-dark-gray mb-4">
-                  Comprehensive guides and tutorials
+                  Comprehensive guides and tutorials.
                 </p>
-              <Button 
-                variant="outline" 
-                size="sm" 
-                onClick={handleResourcesClick}
-                className="bg-qb-green/20 text-qb-blue border-qb-blue hover:bg-qb-blue hover:text-white w-32 h-8"
-              >
-                <Book className="w-4 h-4 mr-2" />
-                Resources
-              </Button>
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  onClick={handleResourcesClick}
+                  className="bg-qb-green/20 text-qb-blue border-qb-blue hover:bg-qb-blue hover:text-white w-32 h-8"
+                >
+                  <Book className="w-4 h-4 mr-2" />
+                  Resources
+                </Button>
               </CardContent>
             </Card>
           </div>

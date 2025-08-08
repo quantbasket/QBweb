@@ -1,30 +1,29 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Users, Award, TrendingUp, ExternalLink, Eye, Lightbulb, Heart } from "lucide-react";
+import { Users, BarChart3, CheckShield, Eye, Lightbulb, Heart } from "lucide-react";
 
 const About = () => {
   const teamMembers = [
     {
       name: "Dr. Sarah Chen",
       role: "Chief Executive Officer",
-      description: "Former Goldman Sachs quantitative researcher with 15+ years in algorithmic trading",
+      description: "Former technology lead at Goldman Sachs with 15+ years in building large-scale data systems.",
     },
     {
       name: "Prof. Michael Rodriguez",
       role: "Chief Technology Officer",
-      description: "MIT PhD in Financial Engineering, pioneer in blockchain-based trading systems",
+      description: "MIT PhD in Computer Science, a pioneer in secure and scalable blockchain applications.",
     },
     {
       name: "Dr. Priya Sharma",
-      role: "Head of Quantitative Research",
-      description: "Former Jane Street quantitative analyst, expert in high-frequency trading strategies",
+      role: "Head of Data Science",
+      description: "Former data scientist at Jane Street, expert in predictive modeling and user behavior analysis.",
     },
     {
       name: "James Thompson",
-      role: "Head of Tokenization",
-      description: "Blockchain architect with deep expertise in DeFi protocols and tokenomics",
+      role: "Head of Platform Architecture",
+      description: "Blockchain architect with deep expertise in platform security and digital token standards.",
     },
   ];
 
@@ -39,7 +38,7 @@ const About = () => {
             About Quant Basket
           </h1>
           <p className="text-xl text-gray-200">
-            Pioneering the future of decentralized finance through quantitative innovation
+            Building the future of digital communities through technology and innovation.
           </p>
         </div>
       </section>
@@ -50,10 +49,10 @@ const About = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-qb-navy mb-6">Our Story</h2>
             <p className="text-lg text-qb-dark-gray leading-relaxed">
-              Founded in 2025, Quant Basket emerged from a vision to democratize quantitative finance through 
-              community-driven tokenization. We enable communities to create their own currencies backed by 
-              advanced mathematical models, while providing access to tokenized ETFs representing 
-              real commodities and shares. Our platform bridges traditional finance with blockchain innovation.
+              Founded in 2025, Quant Basket emerged from a vision to build better tools for online communities. 
+              We saw creators and organizations looking for new ways to foster engagement and recognize their members. 
+              Our platform was built to solve this, allowing any community to create its own unique tokens for 
+              recognition, access, and participation, all powered by transparent and secure technology.
             </p>
           </div>
           
@@ -61,38 +60,38 @@ const About = () => {
             <Card className="glass-card text-center border-l-4 border-l-qb-green">
               <CardHeader>
                 <Users className="w-12 h-12 text-qb-green mx-auto mb-4" />
-                <CardTitle className="text-qb-navy">Community Currencies</CardTitle>
+                <CardTitle className="text-qb-navy">Community Tokens</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-qb-dark-gray">
                   Communities create their own tokens with reward mechanisms for meaningful actions, 
-                  fostering engagement and collective growth through quantitative tokenomics.
+                  fostering engagement and recognizing contributions.
                 </p>
               </CardContent>
             </Card>
             
             <Card className="glass-card text-center border-l-4 border-l-qb-blue">
               <CardHeader>
-                <Award className="w-12 h-12 text-qb-blue mx-auto mb-4" />
-                <CardTitle className="text-qb-navy">Mathematical Precision</CardTitle>
+                <BarChart3 className="w-12 h-12 text-qb-blue mx-auto mb-4" />
+                <CardTitle className="text-qb-navy">Data-Driven Insights</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-qb-dark-gray">
-                  Every strategy is backed by proven mathematical models including Black-Scholes, 
-                  Monte Carlo simulations, and advanced quantitative frameworks designed by financial engineers.
+                  Our platform provides powerful analytics to help community leaders understand engagement, 
+                  identify key contributors, and make informed decisions.
                 </p>
               </CardContent>
             </Card>
             
             <Card className="glass-card text-center border-l-4 border-l-qb-green">
               <CardHeader>
-                <TrendingUp className="w-12 h-12 text-qb-green mx-auto mb-4" />
-                <CardTitle className="text-qb-navy">Tokenized Assets</CardTitle>
+                <CheckShield className="w-12 h-12 text-qb-green mx-auto mb-4" />
+                <CardTitle className="text-qb-navy">Verifiable Activity</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-qb-dark-gray">
-                  Access tokenized ETFs backed by real commodities and shares, bringing traditional 
-                  asset exposure to the blockchain with full transparency and mathematical backing.
+                  Leverage blockchain technology for transparent and auditable records of rewards and 
+                  participation, building trust within your community.
                 </p>
               </CardContent>
             </Card>
@@ -113,19 +112,17 @@ const About = () => {
               <Card className="glass-card p-8 border-l-4 border-l-qb-green">
                 <h3 className="text-2xl font-semibold text-qb-navy mb-4">Our Mission</h3>
                 <p className="text-lg text-qb-dark-gray leading-relaxed">
-                  To democratize quantitative finance by empowering communities to create their own currencies 
-                  and access tokenized traditional assets. We bridge the gap between sophisticated financial 
-                  engineering and community-driven blockchain innovation, making institutional-grade strategies 
-                  accessible to everyone.
+                  To empower creators and community leaders with innovative tools that foster engagement, 
+                  recognize contributions, and build vibrant, self-sustaining digital ecosystems.
                 </p>
               </Card>
               
               <Card className="glass-card p-8 border-l-4 border-l-qb-blue">
                 <h3 className="text-2xl font-semibold text-qb-navy mb-4">Our Vision</h3>
                 <p className="text-lg text-qb-dark-gray leading-relaxed">
-                  A world where every community can create its own mathematically-backed economy, where 
-                  traditional assets are seamlessly accessible through blockchain technology, and where 
-                  advanced quantitative strategies enable individuals to achieve institutional-level financial returns.
+                  A world where every community, large or small, has the ability to create its own unique 
+                  digital identity and reward system, fostering deeper connections and shared purpose 
+                  among its members.
                 </p>
               </Card>
             </div>
@@ -142,25 +139,24 @@ const About = () => {
           <Card className="glass-card p-8">
             <h2 className="text-3xl font-bold text-qb-navy mb-6">Our Values</h2>
             <p className="text-lg text-qb-dark-gray mb-6">
-              We believe in democratizing access to sophisticated financial tools through blockchain innovation. 
-              Our commitment to transparency, mathematical rigor, and community empowerment drives everything we do.
-              We're building the future of decentralized finance, one community token at a time.
+              We believe in democratizing access to powerful community-building tools through technology.
+              Our commitment to transparency, data-driven insights, and community empowerment drives everything we do.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
               <div className="text-center">
                 <Eye className="w-8 h-8 text-qb-blue mx-auto mb-3" />
                 <h3 className="font-semibold text-qb-navy mb-2">Transparency</h3>
-                <p className="text-sm text-qb-dark-gray">Open-source principles and blockchain transparency</p>
+                <p className="text-sm text-qb-dark-gray">Open standards and blockchain-based clarity</p>
               </div>
               <div className="text-center">
                 <Lightbulb className="w-8 h-8 text-qb-green mx-auto mb-3" />
                 <h3 className="font-semibold text-qb-navy mb-2">Innovation</h3>
-                <p className="text-sm text-qb-dark-gray">Cutting-edge quantitative finance meets DeFi</p>
+                <p className="text-sm text-qb-dark-gray">Cutting-edge data science meets community building</p>
               </div>
               <div className="text-center">
                 <Heart className="w-8 h-8 text-qb-blue mx-auto mb-3" />
                 <h3 className="font-semibold text-qb-navy mb-2">Community</h3>
-                <p className="text-sm text-qb-dark-gray">Empowering communities through tokenization</p>
+                <p className="text-sm text-qb-dark-gray">Empowering communities through technology</p>
               </div>
             </div>
           </Card>
