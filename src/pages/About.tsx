@@ -1,7 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, BarChart3, CheckShield, Eye, Lightbulb, Heart } from "lucide-react";
+// Corrected lucide-react import: ShieldCheck instead of CheckShield
+import { Users, BarChart3, ShieldCheck, Eye, Lightbulb, Heart } from "lucide-react";
 
 const About = () => {
   const teamMembers = [
@@ -85,7 +86,8 @@ const About = () => {
             
             <Card className="glass-card text-center border-l-4 border-l-qb-green">
               <CardHeader>
-                <CheckShield className="w-12 h-12 text-qb-green mx-auto mb-4" />
+                {/* Corrected component name: ShieldCheck */}
+                <ShieldCheck className="w-12 h-12 text-qb-green mx-auto mb-4" />
                 <CardTitle className="text-qb-navy">Verifiable Activity</CardTitle>
               </CardHeader>
               <CardContent>

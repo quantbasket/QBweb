@@ -8,7 +8,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "@/hooks/use-toast";
-import { CheckCircle, Users, TrendingUp, Coins, Shield } from "lucide-react";
+import { Users, TrendingUp, Gem, BarChart3 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
 const Signup = () => {
@@ -50,7 +50,7 @@ const Signup = () => {
     } else {
       toast({
         title: "Account Created!",
-        description: "Welcome to QuantBasket! Redirecting to your dashboard...",
+        description: "Welcome! Redirecting to your dashboard...",
       });
     }
     setLoading(false);
@@ -79,10 +79,10 @@ const Signup = () => {
           <div className="space-y-8">
             <div>
               <h1 className="text-4xl font-bold text-qb-navy mb-4">
-                Join the Future of Finance
+                Start Building Your Community Today
               </h1>
               <p className="text-xl text-qb-dark-gray">
-                Discover what you can achieve on our revolutionary platform
+                Create, engage, and grow with a new generation of community tools.
               </p>
             </div>
 
@@ -92,8 +92,8 @@ const Signup = () => {
                   <TrendingUp className="w-6 h-6 text-qb-green" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-qb-navy">Buy & Sell Tokenized Portfolios</h3>
-                  <p className="text-qb-dark-gray">Access professionally managed portfolios backed by quantitative strategies</p>
+                  <h3 className="text-lg font-semibold text-qb-navy">Grow Your Community</h3>
+                  <p className="text-qb-dark-gray">Use our suite of tools and analytics to increase engagement and expand your member base.</p>
                 </div>
               </div>
 
@@ -102,28 +102,28 @@ const Signup = () => {
                   <Users className="w-6 h-6 text-qb-blue" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-qb-navy">Community Tokens</h3>
-                  <p className="text-qb-dark-gray">Participate in community-driven tokenization projects and governance</p>
+                  <h3 className="text-lg font-semibold text-qb-navy">Create Community Tokens</h3>
+                  <p className="text-qb-dark-gray">Design and distribute unique tokens to reward members and foster a vibrant ecosystem.</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-qb-green/20 rounded-lg flex items-center justify-center">
-                  <Coins className="w-6 h-6 text-qb-green" />
+                  <Gem className="w-6 h-6 text-qb-green" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-qb-navy">Impact Coins</h3>
-                  <p className="text-qb-dark-gray">Invest in sustainable and socially responsible tokenized assets</p>
+                  <h3 className="text-lg font-semibold text-qb-navy">Recognize Contributions</h3>
+                  <p className="text-qb-dark-gray">Reward your most valuable members with unique tokens that signify their status and contributions.</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-qb-blue/20 rounded-lg flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-qb-blue" />
+                  <BarChart3 className="w-6 h-6 text-qb-blue" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-qb-navy">Advanced Quant Strategies</h3>
-                  <p className="text-qb-dark-gray">Leverage cutting-edge algorithmic strategies designed by financial engineers</p>
+                  <h3 className="text-lg font-semibold text-qb-navy">Gain Actionable Insights</h3>
+                  <p className="text-qb-dark-gray">Understand your community's health with a powerful analytics dashboard to make data-driven decisions.</p>
                 </div>
               </div>
             </div>
@@ -135,7 +135,7 @@ const Signup = () => {
               <CardHeader>
                 <CardTitle className="text-2xl text-qb-navy">Create Your Account</CardTitle>
                 <CardDescription className="text-qb-dark-gray">
-                  Join thousands of users revolutionizing finance
+                  Get started in seconds. No credit card required.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -164,6 +164,7 @@ const Signup = () => {
                     />
                   </div>
                   <div className="space-y-2">
+                    {/* Corrected closing tag from </T> to </Label> */}
                     <Label htmlFor="password" className="text-qb-navy">Password *</Label>
                     <Input
                       id="password"
