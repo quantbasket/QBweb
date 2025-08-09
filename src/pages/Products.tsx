@@ -80,10 +80,6 @@ const Products = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Compliance Disclaimer */}
-      <div className="w-full bg-yellow-100 border-b border-yellow-300 text-yellow-900 text-center py-2 px-4 text-xs sm:text-sm">
-        <strong>Disclaimer:</strong> All products and features described are for community engagement or educational purposes. The digital tokens/coins mentioned have no monetary value and are not financial instruments.
-      </div>
       <Navigation />
       
       {/* Hero Section */}

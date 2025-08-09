@@ -18,10 +18,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Compliance Disclaimer (Slightly Strengthened) */}
-      <div className="w-full bg-yellow-100 border-b border-yellow-300 text-yellow-900 text-center py-2 px-4 text-xs sm:text-sm">
-        <strong>Disclaimer:</strong> All tokens and coins on this platform are for community engagement and recognition only. They do not represent any monetary value and are not tradable financial instruments.
-      </div>
       <Navigation />
       
       {/* Hero Section (Unchanged as requested) */}
