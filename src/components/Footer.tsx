@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaInstagram, FaFacebookF, FaXTwitter, FaYoutube, FaLinkedinIn, FaGithub } from "react-icons/fa6"; // Import icons
+import { FaInstagram, FaFacebookF, FaXTwitter, FaYoutube, FaLinkedinIn, FaGithub } from "react-icons/fa6";
 
 const Footer = () => {
   const handleFooterLinkClick = () => {
@@ -10,7 +10,7 @@ const Footer = () => {
     { name: "Instagram", href: "https://www.instagram.com/quantbasket", icon: <FaInstagram /> },
     { name: "Facebook", href: "https://www.facebook.com/quantbasket", icon: <FaFacebookF /> },
     { name: "X", href: "https://x.com/quantbasket", icon: <FaXTwitter /> },
-    { name: "YouTube", href: "https://www.youtube.com/@quantbasket", icon: <FaYoutube /> }, // Adjusted YouTube link for typical channel URL
+    { name: "YouTube", href: "https://www.youtube.com/@quantbasket", icon: <FaYoutube /> },
     { name: "LinkedIn", href: "https://www.linkedin.com/company/quantbasket", icon: <FaLinkedinIn /> },
     { name: "GitHub", href: "https://github.com/quantbasket", icon: <FaGithub /> },
   ];
@@ -29,8 +29,7 @@ const Footer = () => {
               <span className="text-white font-bold text-xl">Quant Basket</span>
             </div>
             <p className="text-muted-foreground mb-4">
-              Revolutionary platform for community-based tokenization, quantitative strategies,
-              and impact investing powered by advanced financial engineering.
+              Revolutionary platform for creating and managing community-based digital assets to reward participation and build ecosystem value
             </p>
             {/* Social Media Icons Section  */}
             <div className="flex space-x-4 mt-6">
@@ -124,7 +123,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/support" onClick={handleFooterLinkClick} className="text-gray-300 hover:text-qb-green transition-colors">
-                  Support
+                  Contact Us
                 </Link>
               </li>
             </ul>

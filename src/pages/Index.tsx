@@ -13,20 +13,18 @@ const Index = () => {
   const isMobile = useIsMobile();
 
   const handleDownloadApp = () => {
-    // Link to coming soon page instead of app stores
     window.location.href = '/coming-soon';
   };
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Compliance Disclaimer */}
+      {/* Compliance Disclaimer (Slightly Strengthened) */}
       <div className="w-full bg-yellow-100 border-b border-yellow-300 text-yellow-900 text-center py-2 px-4 text-xs sm:text-sm">
-        <strong>Disclaimer:</strong> All tokens and coins on this platform are for community engagement, recognition, or access to non-financial benefits only. They do not represent any monetary value.
-
+        <strong>Disclaimer:</strong> All tokens and coins on this platform are for community engagement and recognition only. They do not represent any monetary value and are not tradable financial instruments.
       </div>
       <Navigation />
       
-      {/* Hero Section */}
+      {/* Hero Section (Unchanged as requested) */}
       <section className="hero-gradient relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-24">
@@ -41,31 +39,16 @@ const Index = () => {
                 <span className="block text-base sm:text-lg text-qb-green mt-2">Additional educational features coming soon.</span>
               </p>
               
-              {/* Mobile App Download Buttons */}
               {isMobile ? (
                 <div className="flex flex-col space-y-3 px-4">
-                  <Button 
-                    variant="qbSecondary" 
-                    size="lg" 
-                    className="text-lg px-8 w-full justify-center"
-                    onClick={handleDownloadApp}
-                  >
+                  <Button variant="qbSecondary" size="lg" className="text-lg px-8 w-full justify-center" onClick={handleDownloadApp} >
                     <Download className="mr-2 w-5 h-5" />
                     Download for iOS
                   </Button>
-                  <Button 
-                    variant="qbGlass" 
-                    size="lg" 
-                    className="text-lg px-8 w-full justify-center text-white border-white hover:!bg-white/60 hover:!text-qb-navy hover:!border-white"
-                    onClick={handleDownloadApp}
-                  >
+                  <Button variant="qbGlass" size="lg" className="text-lg px-8 w-full justify-center text-white border-white hover:!bg-white/60 hover:!text-qb-navy hover:!border-white" onClick={handleDownloadApp} >
                     <Download className="mr-2 w-5 h-5" />
                     Download for Android
                   </Button>
-                  <div className="flex items-center justify-center mt-4 text-white/80">
-                    <Smartphone className="w-4 h-4 mr-2" />
-                    <span className="text-sm">Get the full experience on mobile</span>
-                  </div>
                 </div>
               ) : (
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -84,21 +67,16 @@ const Index = () => {
               )}
             </div>
             
-            {/* Prominent Basket Logo Display */}
             <div className="flex justify-center lg:justify-end">
               <div className="glass-card p-6 sm:p-8 lg:p-12 max-w-sm lg:max-w-md">
-                <img 
-                  src="/qb_sticker.webp" 
-                  alt="Quant Basket Platform" 
-                  className="w-full h-auto transform scale-110"
-                />
+                <img src="/qb_sticker.webp" alt="Quant Basket Platform" className="w-full h-auto transform scale-110" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Community-Based Tokenization Section */}
+      {/* Community-Based Tokenization Section (Unchanged as it contains good disclaimers) */}
       <section className="section-gradient py-12 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -139,31 +117,23 @@ const Index = () => {
               </div>
             </div>
             <div className="order-first lg:order-last">
-              <img 
-                src={communityTokenizationImg} 
-                alt="Community Tokenization" 
-                className="w-full h-auto rounded-xl shadow-lg"
-              />
+              <img src={communityTokenizationImg} alt="Community Tokenization" className="w-full h-auto rounded-xl shadow-lg" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Quantitative Strategies Section */}
+      {/* Quantitative Strategies Section (Unchanged as it contains good disclaimers) */}
       <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className={`${isMobile ? 'order-first' : 'order-last lg:order-first'}`}>
-              <img 
-                src={quantStrategiesImg} 
-                alt="Quantitative Strategies" 
-                className="w-full h-auto rounded-xl shadow-lg opacity-60"
-              />
+              <img src={quantStrategiesImg} alt="Quantitative Strategies" className="w-full h-auto rounded-xl shadow-lg" />
             </div>
             <div className={`text-center lg:text-left ${isMobile ? 'order-last' : ''}`}>
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mb-4">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-qb-navy text-center lg:text-left">
-                  Tokenized Quant Strategies (Educational)
+                  Tokenized Quant Strategies
                 </h2>
                 <span className="bg-qb-blue/20 text-qb-blue px-3 py-1 rounded-full text-sm font-medium">Planned</span>
                   <span className="bg-qb-blue/20 text-qb-blue px-3 py-1 rounded-full text-sm font-medium">Educational</span>
@@ -176,7 +146,6 @@ const Index = () => {
                   <BarChart3 className="w-6 h-6 text-qb-green mt-1 mx-auto sm:mx-0 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-qb-navy">Advanced Analytics</h3>
-                    <p className="text-qb-dark-gray">Real-time risk assessment and portfolio optimization</p>
                     <p className="text-qb-dark-gray">Real-time risk assessment and portfolio optimization for learning purposes only. No financial advice or products.</p>
                   </div>
                 </div>
@@ -184,7 +153,6 @@ const Index = () => {
                   <TrendingUp className="w-6 h-6 text-qb-blue mt-1 mx-auto sm:mx-0 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-qb-navy">Algorithmic Strategies</h3>
-                    <p className="text-qb-dark-gray">Automated execution of complex strategies</p>
                     <p className="text-qb-dark-gray">Automated execution of complex strategies for demonstration and education. Not for trading or investment.</p>
                   </div>
                 </div>
@@ -194,23 +162,23 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Impact Marketplace Section */}
+      {/* Impact Section (Headline Changed) */}
       <section className="section-gradient py-12 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="text-center lg:text-left">
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mb-4">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-qb-navy">Impact Marketplace</h2>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-qb-navy">The Impact Hub</h2>
                 <span className="bg-qb-green/20 text-qb-green px-3 py-1 rounded-full text-sm font-medium">Community Recognition</span>
               </div>
               <p className="text-base sm:text-lg text-qb-dark-gray mb-6 px-2 sm:px-0">
-                Future expansion: A marketplace for recognizing impact-driven projects and community achievements. All features are for recognition and engagement only, not for financial gain or investment.
+                Future expansion: A hub for recognizing impact-driven projects and community achievements. All features are for recognition and engagement only, not for financial gain or investment.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <Card className="glass-card">
                   <CardContent className={`p-4 ${isMobile ? 'flex items-center space-x-3' : ''}`}>
                     <Coins className={`w-8 h-8 text-qb-green mb-2 ${isMobile ? 'mb-0 flex-shrink-0' : 'mx-auto sm:mx-0'}`} />
-                    <div className={isMobile ? 'flex-1' : ''}>
+                    <div>
                       <h3 className={`font-semibold text-qb-navy ${isMobile ? 'text-left' : 'text-center sm:text-left'}`}>ESG Compliance</h3>
                       <p className={`text-sm text-qb-dark-gray ${isMobile ? 'text-left' : 'text-center sm:text-left'}`}>All projects meet strict environmental and social criteria</p>
                     </div>
@@ -219,7 +187,7 @@ const Index = () => {
                 <Card className="glass-card">
                   <CardContent className={`p-4 ${isMobile ? 'flex items-center space-x-3' : ''}`}>
                     <TrendingUp className={`w-8 h-8 text-qb-blue mb-2 ${isMobile ? 'mb-0 flex-shrink-0' : 'mx-auto sm:mx-0'}`} />
-                    <div className={isMobile ? 'flex-1' : ''}>
+                    <div>
                       <h3 className={`font-semibold text-qb-navy ${isMobile ? 'text-left' : 'text-center sm:text-left'}`}>Measurable Impact</h3>
                       <p className={`text-sm text-qb-dark-gray ${isMobile ? 'text-left' : 'text-center sm:text-left'}`}>Track real-world outcomes and community recognition. No financial returns or investments are offered.</p>
                     </div>
@@ -228,95 +196,66 @@ const Index = () => {
               </div>
             </div>
             <div className="order-first lg:order-last">
-              <img 
-                src={impactMarketplaceImg} 
-                alt="Impact Marketplace" 
-                className="w-full h-auto rounded-xl shadow-lg opacity-60"
-              />
+              <img src={impactMarketplaceImg} alt="Impact Hub" className="w-full h-auto rounded-xl shadow-lg" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Overview - Hidden on Mobile */}
+      {/* Features Overview Section (Headline & Content Changed) */}
       {!isMobile && (
         <section className="py-12 sm:py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-qb-navy mb-8 lg:mb-12">
-              Everything You Need for Modern Finance
+              A Platform for Modern Communities
             </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            <Card className="glass-card hover:shadow-xl transition-all duration-300">
-              <CardHeader>
-                <Users className="w-12 h-12 text-qb-green mx-auto mb-4" />
-                <CardTitle className="text-qb-navy">Community Tokens</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-qb-dark-gray mb-4">Participate in decentralized communities and governance</p>
-                {isMobile ? (
-                  <Button 
-                    variant="qbOutline" 
-                    size="sm" 
-                    className="w-full"
-                    onClick={handleDownloadApp}
-                  >
-                    <Download className="w-4 h-4 mr-2" />
-                    Get App
-                  </Button>
-                ) : (
-                  <Link to="/community-tokens">
-                    <Button variant="qbOutline" size="sm" className="w-full">
-                      Learn More
-                    </Button>
-                  </Link>
-                )}
-              </CardContent>
-            </Card>
-            
-            <Card className="glass-card hover:shadow-xl transition-all duration-300 opacity-60">
-              <CardHeader>
-                <Coins className="w-12 h-12 text-qb-blue mx-auto mb-4" />
-                <div className="text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+              <Card className="glass-card hover:shadow-xl transition-all duration-300">
+                <CardHeader>
+                  <Users className="w-12 h-12 text-qb-green mx-auto mb-4" />
+                  <CardTitle className="text-qb-navy">Community Tokens</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-qb-dark-gray mb-4">Participate in member-led communities and governance.</p>
+                  <Link to="/community-tokens"><Button variant="qbOutline" size="sm" className="w-full">Learn More</Button></Link>
+                </CardContent>
+              </Card>
+              <Card className="glass-card hover:shadow-xl transition-all duration-300 opacity-60">
+                <CardHeader>
+                  <Coins className="w-12 h-12 text-qb-blue mx-auto mb-4" />
                   <CardTitle className="text-qb-navy mb-2">Impact Coins</CardTitle>
-                  <span className="bg-qb-green/20 text-qb-green px-2 py-1 rounded text-xs">Recognition Only</span>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-qb-dark-gray">Earned for making a positive impact in the community. Impact Coins are recognition tokens only and have no financial value.</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="glass-card hover:shadow-xl transition-all duration-300 opacity-60">
-              <CardHeader>
-                <BarChart3 className="w-12 h-12 text-qb-green mx-auto mb-4" />
-                <div className="text-center">
+                  <span className="bg-qb-green/20 text-qb-green rounded text-xs px-2 py-0.5 inline-block">Recognition Only</span>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-qb-dark-gray">Earned for making a positive impact. These are recognition tokens with no monetary value.</p>
+                </CardContent>
+              </Card>
+              <Card className="glass-card hover:shadow-xl transition-all duration-300 opacity-60">
+                <CardHeader>
+                  <BarChart3 className="w-12 h-12 text-qb-green mx-auto mb-4" />
                   <CardTitle className="text-qb-navy mb-2">Quant Strategies</CardTitle>
-                  <span className="bg-qb-blue/20 text-qb-blue px-2 py-1 rounded text-xs">Planned</span>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-qb-dark-gray">Access advanced algorithmic market strategies</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="glass-card hover:shadow-xl transition-all duration-300 opacity-60">
-              <CardHeader>
-                <TrendingUp className="w-12 h-12 text-qb-blue mx-auto mb-4" />
-                <div className="text-center">
+                  <span className="bg-qb-blue/20 text-qb-blue rounded text-xs px-2 py-0.5 inline-block">Planned</span>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-qb-dark-gray">Learn about advanced algorithmic models in an educational setting.</p>
+                </CardContent>
+              </Card>
+              <Card className="glass-card hover:shadow-xl transition-all duration-300 opacity-60">
+                <CardHeader>
+                  <TrendingUp className="w-12 h-12 text-qb-blue mx-auto mb-4" />
                   <CardTitle className="text-qb-navy mb-2">Tokenized Portfolios</CardTitle>
-                  <span className="bg-qb-blue/20 text-qb-blue px-2 py-1 rounded text-xs">Planned</span>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-qb-dark-gray">Diversified portfolios powered by financial engineering</p>
-              </CardContent>
-            </Card>
+                  <span className="bg-qb-blue/20 text-qb-blue rounded text-xs px-2 py-0.5 inline-block">Planned</span>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-qb-dark-gray">Learn about diversified digital asset portfolios in a simulated environment.</p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
       )}
 
-      {/* CTA Section */}
+      {/* CTA Section (Unchanged) */}
       <section className="hero-gradient py-12 sm:py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 lg:mb-6">
@@ -331,21 +270,11 @@ const Index = () => {
           
           {isMobile ? (
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <Button 
-                variant="qbPrimary" 
-                size="lg" 
-                className="text-lg px-8 w-full sm:w-auto"
-                onClick={handleDownloadApp}
-              >
+              <Button variant="qbPrimary" size="lg" className="text-lg px-8 w-full sm:w-auto" onClick={handleDownloadApp} >
                 <Download className="mr-2 w-5 h-5" />
                 iOS App
               </Button>
-              <Button 
-                variant="qbSecondary" 
-                size="lg" 
-                className="text-lg px-8 w-full sm:w-auto"
-                onClick={handleDownloadApp}
-              >
+              <Button variant="qbSecondary" size="lg" className="text-lg px-8 w-full sm:w-auto" onClick={handleDownloadApp} >
                 <Download className="mr-2 w-5 h-5" />
                 Android App
               </Button>

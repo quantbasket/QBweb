@@ -1,33 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-// Corrected lucide-react import: ShieldCheck instead of CheckShield
 import { Users, BarChart3, ShieldCheck, Eye, Lightbulb, Heart } from "lucide-react";
 
 const About = () => {
-  const teamMembers = [
-    {
-      name: "Dr. Sarah Chen",
-      role: "Chief Executive Officer",
-      description: "Former technology lead at Goldman Sachs with 15+ years in building large-scale data systems.",
-    },
-    {
-      name: "Prof. Michael Rodriguez",
-      role: "Chief Technology Officer",
-      description: "MIT PhD in Computer Science, a pioneer in secure and scalable blockchain applications.",
-    },
-    {
-      name: "Dr. Priya Sharma",
-      role: "Head of Data Science",
-      description: "Former data scientist at Jane Street, expert in predictive modeling and user behavior analysis.",
-    },
-    {
-      name: "James Thompson",
-      role: "Head of Platform Architecture",
-      description: "Blockchain architect with deep expertise in platform security and digital token standards.",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -39,7 +15,7 @@ const About = () => {
             About Quant Basket
           </h1>
           <p className="text-xl text-gray-200">
-            Building the future of digital communities through technology and innovation.
+            We provide technology that empowers digital communities and fosters member engagement.
           </p>
         </div>
       </section>
@@ -50,10 +26,10 @@ const About = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-qb-navy mb-6">Our Story</h2>
             <p className="text-lg text-qb-dark-gray leading-relaxed">
-              Founded in 2025, Quant Basket emerged from a vision to build better tools for online communities. 
-              We saw creators and organizations looking for new ways to foster engagement and recognize their members. 
-              Our platform was built to solve this, allowing any community to create its own unique tokens for 
-              recognition, access, and participation, all powered by transparent and secure technology.
+              Quant Basket was founded in 2025 by a team of technologists and community builders who saw a need for better engagement tools. We observed that creators, non-profits, and educational institutions were searching for effective ways to recognize member contributions and foster participation.
+            </p>
+            <p className="text-lg text-qb-dark-gray leading-relaxed mt-4">
+              Our platform was built to solve this challenge. We provide a Software-as-a-Service (SaaS) solution that allows any organization to create and manage its own system of digital points for recognition, granting access to benefits, and facilitating community polling—all powered by secure and transparent technology.
             </p>
           </div>
           
@@ -61,12 +37,11 @@ const About = () => {
             <Card className="glass-card text-center border-l-4 border-l-qb-green">
               <CardHeader>
                 <Users className="w-12 h-12 text-qb-green mx-auto mb-4" />
-                <CardTitle className="text-qb-navy">Community Tokens</CardTitle>
+                <CardTitle className="text-qb-navy">Community Engagement</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-qb-dark-gray">
-                  Communities create their own tokens with reward mechanisms for meaningful actions, 
-                  fostering engagement and recognizing contributions.
+                  Our core offering helps communities create their own digital points to reward meaningful actions and recognize contributions.
                 </p>
               </CardContent>
             </Card>
@@ -78,22 +53,19 @@ const About = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-qb-dark-gray">
-                  Our platform provides powerful analytics to help community leaders understand engagement, 
-                  identify key contributors, and make informed decisions.
+                  We provide analytics to help leaders understand engagement, identify key contributors, and make informed decisions.
                 </p>
               </CardContent>
             </Card>
             
             <Card className="glass-card text-center border-l-4 border-l-qb-green">
               <CardHeader>
-                {/* Corrected component name: ShieldCheck */}
                 <ShieldCheck className="w-12 h-12 text-qb-green mx-auto mb-4" />
-                <CardTitle className="text-qb-navy">Verifiable Activity</CardTitle>
+                <CardTitle className="text-qb-navy">Secure Activity</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-qb-dark-gray">
-                  Leverage blockchain technology for transparent and auditable records of rewards and 
-                  participation, building trust within your community.
+                  Leverage secure ledger technology for transparent and auditable records of rewards and participation.
                 </p>
               </CardContent>
             </Card>
@@ -101,11 +73,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="h-px bg-gradient-to-r from-transparent via-qb-dark-gray/20 to-transparent"></div>
-
-
-      {/* Legacy & Mission */}
+      {/* Our Mission & Vision */}
       <section className="py-8 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -114,17 +82,13 @@ const About = () => {
               <Card className="glass-card p-8 border-l-4 border-l-qb-green">
                 <h3 className="text-2xl font-semibold text-qb-navy mb-4">Our Mission</h3>
                 <p className="text-lg text-qb-dark-gray leading-relaxed">
-                  To empower creators and community leaders with innovative tools that foster engagement, 
-                  recognize contributions, and build vibrant, self-sustaining digital ecosystems.
+                  To empower community leaders with innovative software that fosters engagement, recognizes contributions, and helps build vibrant, self-sustaining digital ecosystems.
                 </p>
               </Card>
-              
               <Card className="glass-card p-8 border-l-4 border-l-qb-blue">
                 <h3 className="text-2xl font-semibold text-qb-navy mb-4">Our Vision</h3>
                 <p className="text-lg text-qb-dark-gray leading-relaxed">
-                  A world where every community, large or small, has the ability to create its own unique 
-                  digital identity and reward system, fostering deeper connections and shared purpose 
-                  among its members.
+                  A future where every community can use technology to create its own unique digital identity and rewards system, fostering deeper connections and shared purpose among its members.
                 </p>
               </Card>
             </div>
@@ -132,34 +96,16 @@ const About = () => {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="h-px bg-gradient-to-r from-transparent via-qb-dark-gray/20 to-transparent"></div>
-
-      {/* Values Section */}
+      {/* Our Roadmap & Disclaimer */}
       <section className="section-gradient py-8">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <Card className="glass-card p-8">
-            <h2 className="text-3xl font-bold text-qb-navy mb-6">Our Values</h2>
+            <h2 className="text-3xl font-bold text-qb-navy mb-6">What's Coming Next (Our Roadmap)</h2>
             <p className="text-lg text-qb-dark-gray mb-6">
-              We believe in democratizing access to powerful community-building tools through technology.
-              Our commitment to transparency, data-driven insights, and community empowerment drives everything we do.
+              We are continuously exploring new features to enhance community and educational experiences. Future planned offerings, such as educational modules on portfolio concepts and quantitative strategies, are not yet available. They will only be developed and launched in full compliance with applicable laws and regulations in appropriate jurisdictions.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-              <div className="text-center">
-                <Eye className="w-8 h-8 text-qb-blue mx-auto mb-3" />
-                <h3 className="font-semibold text-qb-navy mb-2">Transparency</h3>
-                <p className="text-sm text-qb-dark-gray">Open standards and blockchain-based clarity</p>
-              </div>
-              <div className="text-center">
-                <Lightbulb className="w-8 h-8 text-qb-green mx-auto mb-3" />
-                <h3 className="font-semibold text-qb-navy mb-2">Innovation</h3>
-                <p className="text-sm text-qb-dark-gray">Cutting-edge data science meets community building</p>
-              </div>
-              <div className="text-center">
-                <Heart className="w-8 h-8 text-qb-blue mx-auto mb-3" />
-                <h3 className="font-semibold text-qb-navy mb-2">Community</h3>
-                <p className="text-sm text-qb-dark-gray">Empowering communities through technology</p>
-              </div>
+            <div className="mt-4 p-4 bg-yellow-100 border border-yellow-300 text-yellow-900 rounded-lg text-sm">
+                <strong>Important Disclaimer:</strong> Quant Basket's current services are strictly for non-financial community engagement. We do not offer any financial instruments, investments, or Virtual Digital Assets (VDAs). All platform points or coins have no monetary value and are non-transferable.
             </div>
           </Card>
         </div>

@@ -10,7 +10,8 @@ import About from "./pages/About";
 import Products from "./pages/Products";
 import CommunityTokens from "./pages/CommunityTokens";
 import Pricing from "./pages/Pricing";
-import Support from "./pages/Support";
+// --- CHANGE 1: Import ContactUs instead of Support ---
+import ContactUs from "./pages/ContactUs"; // Assuming you have renamed Support.tsx to ContactUs.tsx
 import Learn from "./pages/Learn";
 import Resources from "./pages/Resources";
 import Signup from "./pages/Signup";
@@ -23,7 +24,6 @@ import RefundPolicy from "./pages/RefundPolicy";
 import ComingSoon from "./pages/ComingSoon";
 import AppComingSoon from "./pages/AppComingSoon";
 import { useEffect } from "react";
-// 1. Import BOTH the provider and the new page view tracker
 import { PostHogProvider, PostHogPageviewTracker } from "./components/PostHogProvider";
 
 const queryClient = new QueryClient();
@@ -95,7 +95,8 @@ const AppContent = () => {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/learn" element={<Learn />} />
         <Route path="/resources" element={<Resources />} />
-        <Route path="/support" element={<Support />} />
+        {/* --- CHANGE 2: Use the ContactUs component for the /support route --- */}
+        <Route path="/support" element={<ContactUs />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/refund-policy" element={<RefundPolicy />} />
@@ -151,7 +152,6 @@ const App = () => (
       <AuthProvider>
         <TooltipProvider>
           <BrowserRouter>
-            {/* 2. Place the tracker INSIDE the router */}
             <PostHogPageviewTracker />
             <AppContent />
           </BrowserRouter>

@@ -19,7 +19,7 @@ const Products = () => {
     {
       title: "Community Tokens",
       icon: Users,
-      description: "Create and manage digital tokens that reward meaningful actions and align with your community's goals and values.",
+      description: "Create and manage digital tokens that reward meaningful actions and align with your community's goals and values. These tokens are for engagement and have no monetary value.",
       features: [
         "Reward-based token distribution",
         "Community goal alignment",
@@ -34,7 +34,7 @@ const Products = () => {
     {
       title: "Impact Coins",
       icon: Globe,
-      description: "Future feature: Launch tokens linked to ESG-compliant projects, with transparent tracking of impact metrics.",
+      description: "A planned feature to recognize contributions to ESG-compliant projects, with transparent tracking of impact metrics. These are non-financial recognition units.",
       features: [
         "ESG compliance tracking",
         "Verifiable impact measurement",
@@ -42,37 +42,37 @@ const Products = () => {
         "Promote social responsibility",
         "Showcase environmental benefits"
       ],
-      badge: "Coming Soon",
+      badge: "Planned",
       color: "qb-blue",
       available: false
     },
     {
       title: "Quant Strategies",
       icon: BarChart3,
-      description: "Planned feature: Apply mathematical models and data analysis to uncover insights within the platform's ecosystem.",
+      description: "Planned feature to apply mathematical models to uncover insights within the platform's ecosystem for educational purposes. No financial advice or trading is offered.",
       features: [
         "Data-backed analytical models",
         "Automated insight generation",
         "Ecosystem trend analysis",
         "Quantitative activity analysis",
-        "Advanced modeling tools"
+        "Advanced modeling tools for learning"
       ],
-      badge: "Planned",
+      badge: "Educational",
       color: "qb-green",
       available: false
     },
     {
       title: "Tokenized Portfolios",
       icon: TrendingUp,
-      description: "Future expansion: Curate collections of various tokens and projects available on the platform into thematic bundles.",
+      description: "A planned educational feature to learn how to curate collections of on-platform digital assets into thematic bundles in a simulated environment.",
       features: [
-        "Multi-token collections",
+        "Learn about multi-asset collections",
         "Thematic bundling of projects",
         "Transparent composition",
-        "Broaden platform participation",
+        "Simulated portfolio management",
         "Curate based on themes or goals"
       ],
-      badge: "Planned",
+      badge: "Educational",
       color: "qb-blue",
       available: false
     }
@@ -80,6 +80,10 @@ const Products = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Compliance Disclaimer */}
+      <div className="w-full bg-yellow-100 border-b border-yellow-300 text-yellow-900 text-center py-2 px-4 text-xs sm:text-sm">
+        <strong>Disclaimer:</strong> All products and features described are for community engagement or educational purposes. The digital tokens/coins mentioned have no monetary value and are not financial instruments.
+      </div>
       <Navigation />
       
       {/* Hero Section */}
@@ -87,42 +91,17 @@ const Products = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className={`font-bold text-gray-900 mb-6 ${isMobile ? 'text-3xl' : 'text-5xl'}`}>
-              Pioneering Tools for Digital Ecosystems
+              Tools for Digital Communities
             </h1>
             <p className={`text-gray-600 mb-8 leading-relaxed ${isMobile ? 'text-lg px-2' : 'text-xl'}`}>
-              Explore our cutting-edge products designed to build, measure, and grow digital communities and initiatives.
+              Explore our products designed to build, measure, and grow digital communities and educational initiatives.
             </p>
-            {isMobile ? (
-              <div className="flex justify-center">
-                <Button 
-                  onClick={handleDownloadApp}
-                  size="lg" 
-                  className="w-full max-w-xs bg-blue-600 hover:bg-blue-700"
-                >
-                  <Download className="mr-2 h-5 w-5" />
-                  Download App
-                </Button>
-              </div>
-            ) : (
-              <div className="flex gap-4 justify-center">
-                <Button 
-                  onClick={handleDownloadApp}
-                  size="lg" 
-                  className="bg-blue-600 hover:bg-blue-700"
-                >
-                  <Download className="mr-2 h-5 w-5" />
-                  Download for iOS
-                </Button>
-                <Button 
-                  onClick={handleDownloadApp}
-                  size="lg" 
-                  variant="outline"
-                >
-                  <Smartphone className="mr-2 h-5 w-5" />
-                  Download for Android
-                </Button>
-              </div>
-            )}
+            <div className="flex gap-4 justify-center">
+              <Button onClick={handleDownloadApp} size="lg" className="bg-blue-600 hover:bg-blue-700">
+                <Download className="mr-2 h-5 w-5" />
+                Download App
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -140,11 +119,7 @@ const Products = () => {
                     </div>
                     <Badge 
                       variant="secondary" 
-                      className={
-                        product.available ? "bg-qb-green/20 text-qb-green" : 
-                        product.badge === "Coming Soon" ? "bg-qb-green/20 text-qb-green" :
-                        "bg-qb-blue/20 text-qb-blue"
-                      }
+                      className={ product.available ? "bg-qb-green/20 text-qb-green" : "bg-qb-blue/20 text-qb-blue" }
                     >
                       {product.badge}
                     </Badge>
@@ -155,7 +130,7 @@ const Products = () => {
                   <p className="text-qb-dark-gray">{product.description}</p>
                   
                   <div>
-                    <h4 className="font-semibold text-qb-navy mb-3">Key Features:</h4>
+                    <h4 className="font-semibold text-qb-navy mb-3">Highlights:</h4>
                     <ul className="space-y-2">
                       {product.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center space-x-2">
@@ -175,12 +150,8 @@ const Products = () => {
                         </Button>
                       </Link>
                     ) : (
-                      <Button 
-                        variant="qbSecondary" 
-                        className="w-full"
-                        disabled={true}
-                      >
-                        Coming Soon
+                      <Button variant="qbSecondary" className="w-full" disabled={true}>
+                        Learn More
                       </Button>
                     )}
                   </div>
@@ -195,95 +166,65 @@ const Products = () => {
       <section className="section-gradient py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className={`font-bold text-qb-navy mb-6 ${isMobile ? 'text-2xl' : 'text-4xl'}`}>Platform Features</h2>
+            <h2 className={`font-bold text-qb-navy mb-6 ${isMobile ? 'text-2xl' : 'text-4xl'}`}>Platform Capabilities</h2>
             <p className={`text-qb-dark-gray ${isMobile ? 'text-base px-2' : 'text-lg'}`}>
               Advanced capabilities that power all our products.
             </p>
           </div>
-          
           <div className={`grid gap-8 ${isMobile ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-3'}`}>
             <Card className="glass-card text-center">
               <CardHeader>
                 <Zap className="w-12 h-12 text-qb-green mx-auto mb-4" />
                 <CardTitle className="text-qb-navy">Real-time Analytics</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-qb-dark-gray">
-                  Monitor platform activity, engagement metrics, and ecosystem data in real-time 
-                  with our advanced analytics dashboard.
-                </p>
-              </CardContent>
+              <CardContent><p className="text-qb-dark-gray">Monitor platform activity and engagement metrics with our advanced analytics dashboard.</p></CardContent>
             </Card>
-            
             <Card className="glass-card text-center">
               <CardHeader>
                 <Shield className="w-12 h-12 text-qb-blue mx-auto mb-4" />
                 <CardTitle className="text-qb-navy">Enterprise-Grade Security</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-qb-dark-gray">
-                  Multi-layered security protocols, platform audits, 
-                  and robust institutional-grade data encryption.
-                </p>
-              </CardContent>
+              <CardContent><p className="text-qb-dark-gray">Multi-layered security protocols and robust institutional-grade data encryption.</p></CardContent>
             </Card>
-            
             <Card className="glass-card text-center">
               <CardHeader>
                 <Users className="w-12 h-12 text-qb-green mx-auto mb-4" />
                 <CardTitle className="text-qb-navy">Community Driven</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-qb-dark-gray">
-                  Participate in governance and shape the future 
-                  of the platform through democratic on-platform mechanisms.
-                </p>
-              </CardContent>
+              <CardContent><p className="text-qb-dark-gray">Participate in governance and shape the future of the platform through on-platform mechanisms.</p></CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Technology Stack - Hidden on Mobile */}
+      {/* Technology Stack */}
       {!isMobile && (
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-qb-navy mb-6">Built on Cutting-Edge Technology</h2>
               <p className="text-lg text-qb-dark-gray">
-                Our platform leverages the latest advances in blockchain, AI, and data science.
+                Our platform leverages the latest advances in secure ledgers, AI, and data science.
               </p>
             </div>
-            
             <div className="grid gap-8 grid-cols-2 md:grid-cols-4">
               <div className="text-center">
-                <div className="w-16 h-16 bg-qb-green/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <span className="font-bold text-qb-green">Chain</span>
-                </div>
-                <h3 className="font-semibold text-qb-navy">Blockchain Tech</h3>
+                <div className="w-16 h-16 bg-qb-green/20 rounded-lg flex items-center justify-center mx-auto mb-3"><span className="font-bold text-qb-green">Ledger</span></div>
+                <h3 className="font-semibold text-qb-navy">Secure Ledger Tech</h3>
                 <p className="text-sm text-qb-dark-gray">For transparent activity</p>
               </div>
-              
               <div className="text-center">
-                <div className="w-16 h-16 bg-qb-blue/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <span className="font-bold text-qb-blue">AI</span>
-                </div>
+                <div className="w-16 h-16 bg-qb-blue/20 rounded-lg flex items-center justify-center mx-auto mb-3"><span className="font-bold text-qb-blue">AI</span></div>
                 <h3 className="font-semibold text-qb-navy">Machine Learning</h3>
-                <p className="text-sm text-qb-dark-gray">For predictive insights</p>
+                <p className="text-sm text-qb-dark-gray">For engagement analytics</p>
               </div>
-              
               <div className="text-center">
-                <div className="w-16 h-16 bg-qb-green/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <span className="font-bold text-qb-green">Q</span>
-                </div>
+                <div className="w-16 h-16 bg-qb-green/20 rounded-lg flex items-center justify-center mx-auto mb-3"><span className="font-bold text-qb-green">Q</span></div>
                 <h3 className="font-semibold text-qb-navy">Quantitative Analysis</h3>
                 <p className="text-sm text-qb-dark-gray">For data-driven models</p>
               </div>
-              
               <div className="text-center">
-                <div className="w-16 h-16 bg-qb-blue/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <span className="font-bold text-qb-blue">API</span>
-                </div>
+                <div className="w-16 h-16 bg-qb-blue/20 rounded-lg flex items-center justify-center mx-auto mb-3"><span className="font-bold text-qb-blue">API</span></div>
                 <h3 className="font-semibold text-qb-navy">Integrations</h3>
                 <p className="text-sm text-qb-dark-gray">Connect third-party tools</p>
               </div>
@@ -291,39 +232,22 @@ const Products = () => {
           </div>
         </section>
       )}
-
+      
       {/* CTA Section */}
       <section className="hero-gradient py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className={`font-bold text-white mb-6 ${isMobile ? 'text-2xl' : 'text-4xl'}`}>
-            Ready to Explore Our Products?
+            Ready to Explore Our Platform?
           </h2>
           <p className={`text-gray-200 mb-8 ${isMobile ? 'text-lg px-2' : 'text-xl'}`}>
             Start with our available products and be part of our ecosystem as we expand with new features.
           </p>
-          {isMobile ? (
-            <div className="space-y-3">
-              <Link to="/signup" className="block">
-                <Button variant="qbPrimary" size="lg" className="text-lg px-12 w-full">
-                  Get Started
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
-              <Link to="/learn" className="block">
-                <Button variant="outline" size="lg" className="text-lg px-12 w-full border-2 border-white text-white hover:bg-white hover:text-blue-600 bg-transparent transition-all duration-200">
-                  Learn More
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
-            </div>
-          ) : (
-            <Link to="/signup">
-              <Button variant="qbPrimary" size="lg" className="text-lg px-12">
-                Get Started Now
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
-          )}
+          <Link to="/signup">
+            <Button variant="qbPrimary" size="lg" className="text-lg px-12">
+              Get Started Now
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+          </Link>
         </div>
       </section>
 

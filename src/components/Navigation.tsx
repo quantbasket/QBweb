@@ -36,7 +36,7 @@ const Navigation = () => {
     { path: "/products", label: "Products" },
     { path: "/pricing", label: "Pricing" },
     { path: "/learn", label: "Learn" },
-    { path: "/support", label: "Support" }
+    { path: "/support", label: "Contact Us" } // Changed "Support" to "Contact Us"
   ];
 
   return (
